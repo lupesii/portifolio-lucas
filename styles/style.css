@@ -10,6 +10,11 @@
   box-sizing: border-box;
 }
 
+body,
+html {
+  height: 100%;
+}
+
 body {
   font-family: Poppins, sans-serif;
   color: var(--branco);
@@ -27,7 +32,7 @@ span {
 
 main {
   display: grid;
-  grid-template-rows: auto 95vh;
+  grid-template-rows: auto 90vh;
   justify-items: center;
   align-items: center;
 
@@ -186,7 +191,8 @@ main section {
 
 .main_sobre {
   background-image: linear-gradient(45deg, black, #2d3c6b, rgb(40, 42, 75));
-  grid-template-rows: auto 95%;
+  background-size: 100%;
+  grid-template-rows: auto 100%;
   justify-items: center;
 }
 
