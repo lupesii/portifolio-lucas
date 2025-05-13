@@ -185,7 +185,7 @@ main section {
 /* Sobre Mim */
 
 .main_sobre {
-  background-color: black;
+  background-image: linear-gradient(45deg, black, #2d3c6b, rgb(40, 42, 75));
   grid-template-rows: auto 95%;
   justify-items: center;
 }
@@ -248,8 +248,12 @@ main section {
 }
 
 .info_sobre > img {
-  border-radius: 20px;
+  display: block;
+  margin: auto;
   margin-bottom: 24px;
+  border-radius: 20px;
+
+  max-width: 80%;
 }
 
 .links_sobreMim ul {
