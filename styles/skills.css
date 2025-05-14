@@ -1,0 +1,92 @@
+/* Habilidades */
+
+.content-skills {
+  align-self: start;
+  margin-top: 5rem;
+}
+
+.js-icon {
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+.js-icon span {
+  position: absolute;
+  right: 100px;
+}
+
+.icon {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.skills_cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 50px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  width: 15rem;
+  height: 10rem;
+  min-width: 10rem;
+  padding: 20px;
+
+  background-color: var(--azul-escuro-2);
+  border-radius: 5px;
+}
+
+.card span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: 900;
+}
+
+.card span::before,
+.card span::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  z-index: -1;
+  background: linear-gradient(
+    270deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #8b00ff,
+    #ff0000
+  );
+  background-size: 600%;
+  border-radius: 8px;
+  animation: AnimaBorda 10s linear infinite alternate;
+}
+
+.card span::after {
+  filter: blur(15px);
+}
+
+@keyframes AnimaBorda {
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: 600%;
+  }
+}
