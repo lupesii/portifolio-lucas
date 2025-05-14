@@ -44,6 +44,10 @@
   border-radius: 5px;
 }
 
+.card:hover {
+  background-color: var(--azul-escuro);
+}
+
 .card span {
   display: flex;
   flex-direction: column;

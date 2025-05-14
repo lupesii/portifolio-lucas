@@ -2,7 +2,6 @@
 
 .main_items {
   background-size: 100%;
-  grid-template-rows: auto 100%;
   justify-items: center;
   overflow-x: hidden;
 }
