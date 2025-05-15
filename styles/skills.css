@@ -2,6 +2,11 @@
 
 .content-skills {
   align-self: start;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .js-icon {
@@ -24,14 +29,17 @@
 
 .skills_cards {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  max-width: 730px;
+  justify-content: center;
+  gap: clamp(50px, 4vw, 70px);
 }
 
 .card {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-self: center;
 
   position: relative;
   width: 10rem;
