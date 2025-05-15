@@ -2,7 +2,6 @@
 
 .content-skills {
   align-self: start;
-  margin-top: 5rem;
 }
 
 .js-icon {
@@ -35,7 +34,7 @@
   justify-content: center;
 
   position: relative;
-  width: 15rem;
+  width: 10rem;
   height: 10rem;
   min-width: 10rem;
   padding: 20px;
