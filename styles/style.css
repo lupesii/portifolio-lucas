@@ -2,6 +2,7 @@
 @import url(about.css);
 @import url(skills.css);
 @import url(education.css);
+@import url(project.css);
 @import url(sobre_mim.css);
 @import url(footer.css);
 
@@ -46,12 +47,16 @@ span {
 header,
 main {
   display: grid;
-  grid-template-rows: auto 90vh;
+  grid-template-rows: auto;
   justify-items: center;
   align-items: center;
 
   position: relative;
   min-height: 100vh;
+}
+
+header {
+  grid-template-rows: 10vh auto;
 }
 
 nav {
@@ -129,6 +134,48 @@ nav {
 .underline-animate:hover {
   color: #5ab2ff;
   background-size: 100% 2px;
+}
+
+.titulo_secao {
+  grid-column: 1 / -1;
+  position: relative;
+  padding-top: 2.1rem;
+  margin-bottom: 3rem;
+
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--branco-baunilha);
+
+  z-index: 1;
+}
+
+.titulo_secao p {
+  position: absolute;
+  top: -1.5rem;
+
+  font-size: 1.2rem;
+  line-height: 1.25rem;
+}
+
+.titulo_secao span {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  position: absolute;
+  top: -0.8rem;
+  left: 50%;
+  right: 50%;
+
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: var(--branco);
+
+  opacity: 0.4;
+  z-index: -1;
 }
 
 .card-template {
