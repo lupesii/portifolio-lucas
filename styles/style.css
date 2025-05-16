@@ -1,5 +1,9 @@
-@import url(sobre_mim.css);
+@import url(homePage.css);
+@import url(about.css);
 @import url(skills.css);
+@import url(education.css);
+@import url(sobre_mim.css);
+@import url(footer.css);
 
 :root {
   --branco: white;
@@ -48,80 +52,6 @@ main {
 
   position: relative;
   min-height: 100vh;
-}
-
-.typing_text {
-  border: 5px solid var(--branco);
-  padding: 10px 50px;
-  margin: 50px;
-  margin-top: -5vh;
-  z-index: 999;
-
-  font-family: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: max(60px, 4vw);
-}
-
-.cursor {
-  display: inline-block;
-  margin-left: 2px;
-  margin-bottom: 2px;
-  animation: blink 0.8s steps(1) infinite;
-}
-
-@keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  50.01%,
-  100% {
-    opacity: 0;
-  }
-}
-
-.waves,
-.waves_main {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.waves_main {
-  top: 0;
-  z-index: -1;
-  transform: rotate(180deg);
-}
-
-.wave-1 {
-  animation: waveMove-1 3s ease-in-out infinite alternate;
-}
-
-@keyframes waveMove-1 {
-  from {
-    transform: scaleX(1.5);
-  }
-}
-
-.wave-2 {
-  animation: waveMove-2 3s ease-in-out infinite alternate;
-}
-
-@keyframes waveMove-2 {
-  from {
-    transform: scaleX(2);
-  }
-}
-
-.wave-3 {
-  animation: waveMove-3 3s ease-in-out infinite alternate;
-}
-
-@keyframes waveMove-3 {
-  from {
-    transform: scaleX(2.15);
-  }
 }
 
 nav {
@@ -201,114 +131,10 @@ nav {
   background-size: 100% 2px;
 }
 
-footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 30px 0;
-  margin-top: 5vh;
-
-  font-size: 1.3rem;
-  border-top: solid 1px var(--branco-baunilha);
-}
-
-footer h4 {
-  display: flex;
-  gap: 5px;
-}
-
-.link_footer svg:hover {
-  color: var(--azul-claro);
-}
-
-.content-about {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "img text"
-    "img text";
-
-  justify-content: center;
-  align-content: center;
-  width: 50%;
-  padding: 2vw;
-  margin-top: 3vw;
-
+.card-template {
   background-color: var(--azul-escuro-2);
   border-radius: 5px;
   box-shadow: -1px 1px 34px 11px rgba(0, 0, 0, 0.54);
   -webkit-box-shadow: -1px 1px 34px 11px rgba(0, 0, 0, 0.54);
   -moz-box-shadow: -1px 1px 34px 11px rgba(0, 0, 0, 0.54);
-}
-
-.about-image {
-  grid-area: img;
-  justify-self: center;
-  align-self: center;
-}
-
-.octoLupesi {
-  width: clamp(100px, 60vw, 500px);
-}
-
-.about-info {
-  grid-area: text;
-  margin: 0 10px;
-}
-
-.about-text h2 {
-  margin-bottom: 10px;
-  font-size: 2rem;
-  color: var(--branco-baunilha);
-}
-
-.about-text p {
-  font-size: 1rem;
-  line-height: 1.4rem;
-}
-
-.about-actions {
-  margin: max(1vw, 20px) 10px;
-}
-
-.about-actions .button-contato {
-  margin-right: 20px;
-  padding: 10px;
-  background-color: var(--branco-baunilha);
-  border-radius: 5px;
-  color: var(--azul-escuro-2);
-}
-
-.about-actions .button-contato:hover {
-  background-color: var(--branco-baunilha-hover);
-}
-
-.about-actions .button-ler-mais {
-  display: inline-flex;
-  align-items: center;
-  font-size: 1.1em;
-  font-weight: 500;
-}
-
-.about-actions .button-ler-mais svg {
-  content: "";
-  display: inline-block;
-  background: url(/assets/arrow-right.svg) no-repeat;
-  background-size: contain;
-  margin-left: 5px;
-  width: 20px;
-  height: 20px;
-}
-
-.about-actions .button-ler-mais:hover > svg,
-.about-actions .button-ler-mais:hover > svg path {
-  stroke: #007bff;
-}
-
-@media screen and (max-width: 1272px) {
-  .content-about {
-    grid-template-areas:
-      "img img"
-      "text text";
-  }
 }

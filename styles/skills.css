@@ -2,7 +2,8 @@
 
 .content-skills {
   align-self: start;
-  width: 50%;
+  width: 60%;
+  margin-top: 5rem;
 
   display: flex;
   flex-direction: column;
@@ -30,7 +31,7 @@
 .skills_cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  max-width: 730px;
+  width: 100%;
   justify-content: center;
   gap: clamp(50px, 4vw, 70px);
 }

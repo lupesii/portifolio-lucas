@@ -1,0 +1,19 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0;
+  margin-top: 5vh;
+
+  font-size: 1.3rem;
+  border-top: solid 1px var(--branco-baunilha);
+}
+
+footer h4 {
+  display: flex;
+  gap: 5px;
+}
+
+.link_footer svg:hover {
+  color: var(--azul-claro);
+}
