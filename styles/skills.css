@@ -48,6 +48,7 @@
   min-width: 10rem;
   padding: 20px;
 
+  text-align: center;
   background-color: var(--azul-escuro-2);
   border-radius: 5px;
 }
