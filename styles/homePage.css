@@ -71,3 +71,18 @@
     transform: scaleX(2.15);
   }
 }
+
+@media screen and (max-width: 800px) {
+  .typing_text {
+    /* word-break: break-all; */
+    font-size: max(40px, 4vw);
+  }
+
+  body header {
+    grid-template-rows: auto;
+  }
+
+  header nav {
+    display: none;
+  }
+}

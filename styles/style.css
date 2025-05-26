@@ -190,3 +190,13 @@ nav {
   -webkit-box-shadow: -1px 1px 34px 11px rgba(0, 0, 0, 0.54);
   -moz-box-shadow: -1px 1px 34px 11px rgba(0, 0, 0, 0.54);
 }
+
+@media screen and (max-width: 400px) {
+  .titulo_secao {
+    font-size: 2.5rem;
+  }
+
+  .titulo_secao span {
+    font-size: 3.5rem;
+  }
+}

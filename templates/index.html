@@ -7,7 +7,7 @@
     <title>Portifólio LucasPereira DEV</title>
   </head>
   <body>
-    <header>
+    <header id="#home">
       <nav>
         <a class="link_logo" href="/">
           <span class="letra-hover">L</span>
@@ -19,14 +19,11 @@
         </a>
 
         <div class="nav_links">
-          <a class="underline-animate" href="/">Home</a>
-          <a class="underline-animate" href="/templates/sobreMim.html">Sobre</a>
-          <a class="underline-animate" href="/templates/habilidades.html"
-            >Habilidades</a
-          >
-          <a class="underline-animate" href="/templates/formacao.html"
-            >Formação</a
-          >
+          <a class="underline-animate" href="#home">Home</a>
+          <a class="underline-animate" href="#sobre">Sobre</a>
+          <a class="underline-animate" href="#hard-skills">Habilidades</a>
+          <a class="underline-animate" href="#formacao">Formação</a>
+          <a class="underline-animate" href="#projetos">Projetos</a>
           <a
             class="underline-animate"
             href="/assets/Lucas Silva e Pereira.pdf"
@@ -92,7 +89,7 @@
         </svg>
       </section>
 
-      <section class="content-about card-template">
+      <section id="sobre" class="content-about card-template">
         <div class="about-image">
           <img
             class="octoLupesi"
@@ -153,7 +150,7 @@
         </div>
       </section>
 
-      <section class="content-skills">
+      <section id="hard-skills" class="content-skills">
         <section class="js-icon">
           <span style="max-width: 100%">
             <svg
@@ -442,7 +439,7 @@
         </section>
       </section>
 
-      <section class="content-skills">
+      <section id="soft-skills" class="content-skills">
         <section class="js-icon">
           <span style="max-width: 100%">
             <svg
@@ -944,7 +941,7 @@
         </section>
       </section>
 
-      <section class="content-education">
+      <section id="formacao" class="content-education">
         <h2 class="titulo_secao">
           <span>
             <svg
@@ -1008,13 +1005,13 @@
         </div>
         <div class="education-card">
           <h1>Técnico em Desenvolvimento de Sistema</h1>
-          <h2>Pela Etec Professora Ilza Nascimento Pintus</h2>
+          <h2>Pela Etec Prof° Ilza Nascimento Pintus</h2>
           <h3>Jan/2022 - Dez/2024</h3>
           <span></span>
         </div>
       </section>
 
-      <section class="content-projects">
+      <section id="projetos" class="content-projects">
         <h2 class="titulo_secao">
           <span>
             <svg
@@ -1040,18 +1037,36 @@
 
         <section class="project-card-container">
           <div class="project-card">
-            <a href="https://github.com/lupesii/AluraDev" target="_blank">
+            <a
+              href="https://github.com/Gustavo-Zago/DevForge-Atestados-Scrum"
+              target="_blank"
+            >
               <img
                 class="project-capa"
-                src="/assets/alura-dev.png"
-                alt="Alura-Dev"
+                src="/assets/devForge.png"
+                alt="DevForge"
               />
               <div class="project-info">
-                <h1>Nome do Projeto</h1>
-                <h2>Tipo do Projeto</h2>
+                <h1>Atestados-Scrum</h1>
+                <h2>Desenvolvido em Python e JS</h2>
               </div>
             </a>
           </div>
+
+          <div class="project-card">
+            <a href="https://github.com/Fonoteka/FonotekaSite" target="_blank">
+              <img
+                class="project-capa"
+                src="/assets/fonoteka.png"
+                alt="Alura-Dev"
+              />
+              <div class="project-info">
+                <h1>Fonoteka</h1>
+                <h2>Desenvolvido em PHP e JS</h2>
+              </div>
+            </a>
+          </div>
+
           <div class="project-card">
             <a href="https://github.com/lupesii/AluraDev" target="_blank">
               <img
@@ -1060,21 +1075,8 @@
                 alt="Alura-Dev"
               />
               <div class="project-info">
-                <h1>Nome do Projeto</h1>
-                <h2>Tipo do Projeto</h2>
-              </div>
-            </a>
-          </div>
-          <div class="project-card">
-            <a href="https://github.com/lupesii/AluraDev" target="_blank">
-              <img
-                class="project-capa"
-                src="/assets/alura-dev.png"
-                alt="Alura-Dev"
-              />
-              <div class="project-info">
-                <h1>Nome do Projeto</h1>
-                <h2>Tipo do Projeto</h2>
+                <h1>AluraDev</h1>
+                <h2>Desenvolvido em HTML e CSS<h2>
               </div>
             </a>
           </div>

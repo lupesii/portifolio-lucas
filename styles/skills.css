@@ -30,7 +30,7 @@
 
 .skills_cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(130px, auto));
   width: 100%;
   justify-content: center;
   gap: clamp(50px, 4vw, 70px);
@@ -101,5 +101,21 @@
 
   to {
     background-position: 600%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skills_cards {
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  }
+
+  .card {
+    min-width: 0px;
+    width: 8rem;
+  }
+
+  .card span svg {
+    width: 80px;
+    height: 80px;
   }
 }

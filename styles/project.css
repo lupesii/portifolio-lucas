@@ -29,7 +29,7 @@
 
 .project-capa {
   max-width: 450px;
-  width: 30vw;
+  width: max(30vw, 100%);
   border-radius: 10px;
 }
 
