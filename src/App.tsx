@@ -1,11 +1,12 @@
 import "./App.css";
+import DigitalClock from "./components/digitalClock";
 import Starry from "./components/starry";
 
 function App() {
 	return (
 		<div>
 			<Starry />
-			<h1>OI</h1>
+			<DigitalClock />
 		</div>
 	);
 }
