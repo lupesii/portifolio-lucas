@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-*: initial;
+  --color-white: #fff;
+  --color-cinza-100: #cccccc;
+  --color-cinza-200: #3c3c3c;
+  --color-cinza-300: #2a2a32;
+  --color-cinza-400: #1a1a1a;
+  --color-preto: #060606;
+  --color-azul: #0069b9;
+  --color-verde: #006505;
+
+  --font-mono: "Anonymous Pro", monospace;
+  --font-sans: "Albert Sans", sans-serif;
+}
