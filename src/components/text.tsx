@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from "cva";
 import React from "react";
 
-const textVariants = cva("", {
+const textVariants = cva("max-w-fit max-h-fit m-0 p-0 leading-none", {
 	variants: {
 		variant: {
 			"anony-xsm": "text-[12px] font-normal",
@@ -16,11 +16,12 @@ const textVariants = cva("", {
 		},
 		color: {
 			white: "text-white",
+			"cinza-100": "text-cinza-100",
 		},
 	},
 	defaultVariants: {
 		variant: "albert-md",
-		color: "white",
+		color: "cinza-100",
 	},
 });
 
