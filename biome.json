@@ -506,14 +506,7 @@
 		{
 			"includes": [
 				"**/*.{ts,tsx}"
-			],
-			"linter": {
-				"rules": {
-					"style": {
-						"useComponentExportOnlyModules": "error"
-					}
-				}
-			}
+			]
 		},
 		{
 			"includes": [
