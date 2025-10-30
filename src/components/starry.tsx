@@ -40,7 +40,7 @@ export default function Starry() {
 					},
 				},
 				size: {
-					value: 2,
+					value: 1.5,
 					random: true,
 				},
 				links: { enable: false },
