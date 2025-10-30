@@ -46,8 +46,8 @@ export default function DigitalClock() {
 		<div
 			className={`
     absolute top-2 left-2
-    min-w-45 p-1.5 rounded-xl bg-cinza-400 pointer-events-none 
-    inline-flex justify-center items-center gap-2
+		px-2 py-1.5 rounded-lg bg-cinza-400 pointer-events-none 
+    inline-flex justify-center items-center gap-2 w-max h-ma
     `}
 		>
 			<Text variant={"anony-sm"}>{hora}</Text>
