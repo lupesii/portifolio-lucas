@@ -25,13 +25,14 @@ export default function IconLink({
 	url,
 	className,
 	disabled,
+	target = "_blank",
 	aria_label,
 	...props
 }: IconLinkProps) {
 	return (
 		<a
 			href={url}
-			target="_blank"
+			target={target}
 			rel="noopener noreferrer"
 			aria-label={aria_label}
 			className={IconLinkVariants({ disabled, className })}
