@@ -4,7 +4,7 @@ import React from "react";
 const textVariants = cva("max-w-fit max-h-fit m-0 p-0 leading-none", {
 	variants: {
 		variant: {
-			"anony-xsm": "text-[12px] font-normal",
+			none: "",
 			"anony-sm": "text-[15px] font-normal",
 			"anony-sm-bold": "text-[15px] font-semibold",
 			"anony-md-bold": "text-[28px] font-semibold",

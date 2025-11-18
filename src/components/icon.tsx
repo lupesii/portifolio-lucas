@@ -3,6 +3,7 @@ import { cva, type VariantProps } from "cva";
 export const iconVariants = cva("", {
 	variants: {
 		size: {
+			none: "",
 			sm: "w-5 h-5",
 		},
 		animate: {
