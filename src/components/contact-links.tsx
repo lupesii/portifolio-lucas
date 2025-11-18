@@ -1,7 +1,7 @@
-import GithubIcon from "../../assets/icons/Github.svg?react";
-import LinkedinIcon from "../../assets/icons/Linkedin.svg?react";
-import EmailIcon from "../../assets/icons/mail.svg?react";
-import IconLink from "../../components/icon-link";
+import GithubIcon from "../assets/icons/Github.svg?react";
+import LinkedinIcon from "../assets/icons/Linkedin.svg?react";
+import EmailIcon from "../assets/icons/mail.svg?react";
+import IconLink from "./icon-link";
 
 export default function ContactLinks() {
 	return (

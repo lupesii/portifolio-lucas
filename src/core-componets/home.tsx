@@ -1,8 +1,8 @@
 import Perfil from "../assets/images/perfil-espiral.svg?react";
+import ContactLinks from "../components/contact-links";
+import GreenCircle from "../components/green-circle";
+import LanguageIcons from "../components/languagens-icons";
 import Text from "../components/text";
-import ContactLinks from "./components/contact-links";
-import GreenCircle from "./components/green-circle";
-import LanguageIcons from "./components/languagens-icons";
 
 export default function Home() {
 	return (
