@@ -20,7 +20,7 @@ export default function Info() {
 	}
 
 	return (
-		<div className="absolute top-2 left-2 flex flex-col gap-2">
+		<div className="fixed top-2 left-2 flex flex-col gap-2">
 			<DigitalClock />
 			<div className="flex gap-2">
 				<button
