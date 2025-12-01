@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from "cva";
-import HumidityIcon from "../assets/icons/humidity.svg?react";
-import ThermometerIcon from "../assets/icons/thermometer.svg?react";
-import WindIcon from "../assets/icons/wind.svg?react";
+import HumidityIcon from "../assets/icons/weather/humidity.svg?react";
+import ThermometerIcon from "../assets/icons/weather/thermometer.svg?react";
+import WindIcon from "../assets/icons/weather/wind.svg?react";
 import { useWeather } from "../hooks/use-weather";
 import Icon from "./icon";
 import Text from "./text";

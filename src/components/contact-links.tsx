@@ -1,5 +1,5 @@
-import GithubIcon from "../assets/icons/Github.svg?react";
-import LinkedinIcon from "../assets/icons/Linkedin.svg?react";
+import GithubIcon from "../assets/icons/languages/github.svg?react";
+import LinkedinIcon from "../assets/icons/languages/linkedin.svg?react";
 import EmailIcon from "../assets/icons/mail.svg?react";
 import IconLink from "./icon-link";
 

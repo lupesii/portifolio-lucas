@@ -1,5 +1,5 @@
 import { useState } from "react";
-import WeatherIcon from "../assets/icons/weather.svg?react";
+import WeatherIcon from "../assets/icons/weather/weather.svg?react";
 import DigitalClock from "../components/digitalClock";
 import Icon from "../components/icon";
 import WeatherCard from "../components/weather-card";

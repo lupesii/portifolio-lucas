@@ -1,10 +1,10 @@
-import CssIcon from "../assets/icons/css3.svg?react";
-import HtmlIcon from "../assets/icons/html5.svg?react";
-import JsIcon from "../assets/icons/js.svg?react";
-import NextIcon from "../assets/icons/next.svg?react";
-import NodeIcon from "../assets/icons/nodejs-icon.svg?react";
-import ReactIcon from "../assets/icons/react.svg?react";
-import TailIcon from "../assets/icons/tailwind.svg?react";
+import CssIcon from "../assets/icons/languages/css3.svg?react";
+import HtmlIcon from "../assets/icons/languages/html5.svg?react";
+import JsIcon from "../assets/icons/languages/javascript.svg?react";
+import NextIcon from "../assets/icons/languages/next.svg?react";
+import NodeIcon from "../assets/icons/languages/node.svg?react";
+import ReactIcon from "../assets/icons/languages/react.svg?react";
+import TailIcon from "../assets/icons/languages/tailwind.svg?react";
 import Icon from "./icon";
 
 export default function LanguageIcons() {
