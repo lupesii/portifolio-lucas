@@ -1,6 +1,6 @@
 import Perfil from "../assets/images/perfil-espiral.svg?react";
+import Circle from "../components/circle";
 import ContactLinks from "../components/contact-links";
-import GreenCircle from "../components/green-circle";
 import LanguageIcons from "../components/languagens-icons";
 import Text from "../components/text";
 
@@ -20,7 +20,7 @@ export default function Home() {
 					<Text as="h2" variant="anony-xsm">
 						Full-Stack Developer
 					</Text>
-					<GreenCircle />
+					<Circle />
 				</div>
 				<Text as="h2" variant="anony-xsm">
 					Learning, Building and gaining skills with every line code
