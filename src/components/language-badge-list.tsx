@@ -1,0 +1,45 @@
+import CSSIcon from "../assets/icons/languages/colored/css3.svg?react";
+import HtmlIcon from "../assets/icons/languages/colored/html5.svg?react";
+import JSIcon from "../assets/icons/languages/colored/javascript.svg?react";
+import LanguageBadge from "./language-badge";
+
+export const LanguageBadgeInfo = [
+	{
+		nome: "Javascript",
+		svg: JSIcon,
+	},
+	{
+		nome: "CSS3",
+		svg: CSSIcon,
+	},
+	{
+		nome: "Html5",
+		svg: HtmlIcon,
+	},
+];
+
+interface LanguageBadgeListProps {
+	languageList: string[];
+}
+
+export default function LanguageBadgeList({
+	languageList,
+}: LanguageBadgeListProps) {
+	const svgComponents = languageList.map((language) => {
+		return LanguageBadgeInfo.find((object) =>
+			object.nome === language ? object.svg : null,
+		);
+	});
+
+	return (
+		<div className="flex items-center flex-wrap gap-3.75">
+			{svgComponents.map((badge, index) =>
+				badge ? (
+					<LanguageBadge key={index} icon={badge.svg}>
+						{badge.nome}
+					</LanguageBadge>
+				) : null,
+			)}
+		</div>
+	);
+}
