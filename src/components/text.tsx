@@ -8,6 +8,8 @@ const textVariants = cva("max-w-fit max-h-fit m-0 p-0 leading-none", {
 			"anony-xsm": "text-[12px] font-normal font-mono",
 			"anony-sm": "text-[15px] font-normal font-mono",
 			"anony-sm-bold": "text-[15px] font-semibold font-mono",
+			"anony-xl-bold": "text-xl font-semibold font-mono",
+			"anony-2xl-bold": "text-2xl font-semibold font-mono",
 			"anony-md-bold": "text-[28px] font-semibold font-mono",
 			"anony-lg": "text-[32px] font-normal font-mono",
 			"anony-xlg-bold": "text-[64px] font-semibold font-mono",
@@ -20,6 +22,7 @@ const textVariants = cva("max-w-fit max-h-fit m-0 p-0 leading-none", {
 		color: {
 			white: "text-white",
 			"cinza-100": "text-cinza-100",
+			muted: "text-white/50",
 		},
 	},
 	defaultVariants: {
