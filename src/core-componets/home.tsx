@@ -1,12 +1,13 @@
 import Perfil from "../assets/images/perfil-espiral.svg?react";
 import Circle from "../components/circle";
 import ContactLinks from "../components/contact-links";
+import Container from "../components/container";
 import LanguageIcons from "../components/languagens-icons";
 import Text from "../components/text";
 
 export default function Home() {
 	return (
-		<section
+		<Container as="section"
 			aria-label="Perfil"
 			className="flex justify-center items-center flex-col min-w-full h-full"
 		>
@@ -33,6 +34,6 @@ export default function Home() {
 				</Text>
 				<LanguageIcons />
 			</div>
-		</section>
+		</Container>
 	);
 }
