@@ -57,12 +57,12 @@ export default function ProjectCard({
 
 	return (
 		<article
-			className="inline-block bg-cinza-400 px-7.5 py-2.5 rounded-[10px] max-w-[460px] transition duration-50 transform-3d"
+			className="inline-block bg-cinza-400 px-7.5 py-2.5 rounded-[10px] max-w-[460px] transition duration-50 transform-3d border border-azul"
 			onMouseMove={movingCard}
 			onMouseLeave={resetCard}
 			ref={cardRef}
 		>
-			<img src="../../public/Rectangle 8.png" className="mt-3" />
+			<img src="/Rectangle 8.png" className="mt-3" />
 
 			<div className="flex flex-col gap-2.5 mt-4.5 mb-6">
 				<Text variant="anony-2xl-bold" color="white">
@@ -75,7 +75,7 @@ export default function ProjectCard({
 
 			<LanguageBadgeList languageList={languages} />
 
-			<div className="flex items-center justify-between border-t border-t-white mt-10 pt-4">
+			<div className="flex items-center justify-between border-t border-t-white mt-[88px] pt-4">
 				<IconLink
 					href={webSiteURL}
 					icon={ExternalIcon}
