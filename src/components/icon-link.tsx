@@ -1,5 +1,6 @@
 import { cva, type VariantProps } from "cva";
 import Icon from "./icon";
+import Text from "./text";
 
 export const IconLinkVariants = cva("", {
 	variants: {
@@ -21,6 +22,7 @@ interface IconLinkProps
 export default function IconLink({
 	icon,
 	className,
+	children,
 	disabled,
 	target = "_blank",
 	...props
@@ -33,6 +35,7 @@ export default function IconLink({
 			{...props}
 		>
 			<Icon svg={icon} />
+			{children && <Text variant="none" className="font-sans text-[16px]">{children}</Text>}
 		</a>
 	);
 }
