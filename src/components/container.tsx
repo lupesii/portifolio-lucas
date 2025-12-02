@@ -1,10 +1,11 @@
 import { cva, type VariantProps } from "cva";
 import { createElement } from "react";
 
-export const containerVariants = cva("mx-auto", {
+export const containerVariants = cva("mx-auto", 
+	{
 	variants: {
 		size: {
-			md: "max-w-126 px-2",
+			md: "md:h-screen max-w-[75vw]",
 		},
 	},
 	defaultVariants: {
