@@ -6,7 +6,10 @@ import { ProjectState } from "../types/project-state";
 
 export default function Projects() {
 	return (
-		<Container as="section" className="max-w-[75vw] flex flex-col justify-center gap-7.5 h-auto">
+		<Container
+			as="section"
+			className="max-w-[75vw] flex flex-col justify-center gap-7.5 h-auto"
+		>
 			<div>
 				<Title>Projects</Title>
 				<Text
@@ -24,7 +27,7 @@ export default function Projects() {
 					descricao="Description Template"
 					webSiteURL="https://www.google.com"
 					githubURL="https://www.github.com"
-					status={ProjectState.Completed}
+					status={ProjectState.Incompleted}
 					languages={["Html5", "Javascript", "CSS3", "ReactJS", "Tailwind"]}
 				/>
 				<ProjectCard
@@ -43,7 +46,6 @@ export default function Projects() {
 					status={ProjectState.Completed}
 					languages={["Html5", "Javascript", "CSS3", "ReactJS", "Tailwind"]}
 				/>
-				
 			</div>
 		</Container>
 	);
