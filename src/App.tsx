@@ -1,12 +1,12 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import "./App.css";
 
 import Starry from "./components/starry";
+import AboutMe from "./core-componets/about-me";
+import Contact from "./core-componets/contact";
 import Home from "./core-componets/home";
 import Info from "./core-componets/info";
 import Projects from "./core-componets/projects";
-import Contact from "./core-componets/contact";
 
 const queryClient = new QueryClient();
 
@@ -18,11 +18,10 @@ function App() {
 
 			<main className="min-h-full">
 				<Home />
-				<Projects/>
-				<Contact/>
+				<AboutMe />
+				<Projects />
+				<Contact />
 			</main>
-
-			<ReactQueryDevtools initialIsOpen={false} />
 		</QueryClientProvider>
 	);
 }
