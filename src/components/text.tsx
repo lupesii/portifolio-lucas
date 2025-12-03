@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from "cva";
-import React from "react";
+import React, { type ComponentProps, type ElementType } from "react";
 
 const textVariants = cva("max-w-fit max-h-fit m-0 p-0 leading-none", {
 	variants: {
@@ -31,22 +31,31 @@ const textVariants = cva("max-w-fit max-h-fit m-0 p-0 leading-none", {
 	},
 });
 
-interface TextProps extends VariantProps<typeof textVariants> {
-	as?: keyof React.JSX.IntrinsicElements;
-	className?: string;
-	children: React.ReactNode;
-}
+// interface TextProps extends VariantProps<typeof textVariants> {
+// 	as?: keyof React.JSX.IntrinsicElements;
+// 	className?: string;
+// 	children: React.ReactNode;
+// }
 
-export default function Text({
-	as = "span",
+type TextProps<T extends ElementType = "a"> = VariantProps<
+	typeof textVariants
+> &
+	ComponentProps<T> & {
+		as?: T;
+	};
+
+export default function Text<T extends ElementType = ElementType>({
+	as,
 	className,
 	children,
 	variant,
 	color,
 	...props
-}: TextProps) {
+}: TextProps<T>) {
+	const Tag = (as ?? "a") as ElementType;
+
 	return React.createElement(
-		as,
+		Tag,
 		{
 			className: textVariants({ variant, color, className }),
 			...props,
