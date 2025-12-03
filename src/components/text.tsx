@@ -24,20 +24,19 @@ const textVariants = cva("max-w-fit max-h-fit m-0 p-0 leading-none", {
 			"cinza-100": "text-cinza-100",
 			muted: "text-white/50",
 		},
+		trace: {
+			true: "border-l border-l-azul pl-3.5",
+			false: "",
+		},
 	},
 	defaultVariants: {
 		variant: "albert-md",
 		color: "cinza-100",
+		trace: false,
 	},
 });
 
-// interface TextProps extends VariantProps<typeof textVariants> {
-// 	as?: keyof React.JSX.IntrinsicElements;
-// 	className?: string;
-// 	children: React.ReactNode;
-// }
-
-type TextProps<T extends ElementType = "a"> = VariantProps<
+type TextProps<T extends ElementType = "span"> = VariantProps<
 	typeof textVariants
 > &
 	ComponentProps<T> & {
@@ -50,14 +49,14 @@ export default function Text<T extends ElementType = ElementType>({
 	children,
 	variant,
 	color,
+	trace,
 	...props
 }: TextProps<T>) {
-	const Tag = (as ?? "a") as ElementType;
-
+	const Tag = (as ?? "span") as ElementType;
 	return React.createElement(
 		Tag,
 		{
-			className: textVariants({ variant, color, className }),
+			className: textVariants({ variant, color, trace, className }),
 			...props,
 		},
 		children,
