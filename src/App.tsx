@@ -6,6 +6,7 @@ import Starry from "./components/starry";
 import Home from "./core-componets/home";
 import Info from "./core-componets/info";
 import Projects from "./core-componets/projects";
+import Contact from "./core-componets/contact";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ function App() {
 			<main className="min-h-full">
 				<Home />
 				<Projects/>
+				<Contact/>
 			</main>
 
 			<ReactQueryDevtools initialIsOpen={false} />
