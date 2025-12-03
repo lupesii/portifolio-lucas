@@ -10,7 +10,7 @@ export default function Projects() {
 			as="section"
 			className="max-w-[75vw] flex flex-col justify-center gap-7.5 h-auto"
 		>
-			<div>
+			<div className="space-y-5">
 				<Title>Projects</Title>
 				<Text
 					variant="none"
