@@ -5,6 +5,7 @@ export const iconVariants = cva("", {
 		size: {
 			none: "",
 			sm: "w-5 h-5",
+			md: "w-6 h-6",
 		},
 		animate: {
 			true: "animate-spin",
