@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+@theme {
+  --color-*: initial;
+  --color-white: #fff;
+  --color-cinza-100: #cccccc;
+  --color-cinza-200: #3c3c3c;
+  --color-cinza-300: #2a2a32;
+  --color-cinza-400: #1a1a1a;
+  --color-preto: #060606;
+  --color-azul: #0069b9;
+  --color-verde: #006505;
+  --color-vermelho: #8b0000;
+
+  --font-mono: "Anonymous Pro", monospace;
+  --font-sans: "Albert Sans", sans-serif;
+}
+
+@layer utilities {
+  .grid-areas {
+    grid-template-areas: 
+    "title title title title", 
+    "img text text text",
+    "experience experience education education";
+  }
+
+  .area-title {grid-area: title}
+  .area-img {grid-area: img}
+  .area-text {grid-area: text}
+  .area-experience {grid-area: experience}
+  .area-education {grid-area: education}
+  
+  .scrollbar-left {
+    direction: rtl;
+  }
+  
+  .scrollbar-left > * {
+    direction: ltr;
+  }
+
+  .anchor {
+    anchor-name: --BigCircle;
+  }
+
+  .target {
+    position-anchor: --BigCircle;
+    position-area: center center;
+  }
+}
