@@ -1,17 +1,49 @@
 import Perfil from "../assets/images/foto.svg?react";
 import Container from "../components/container";
+import HistoryCard from "../components/history-card";
 import LanguageIcons from "../components/languagens-icons";
 import Text from "../components/text";
 import Title from "../components/title";
 
 export default function AboutMe() {
+	const experiences = [
+		{
+			name: "Self-employed",
+			roll: "Freelance Developer",
+			description: "Developed custom websites and applications for clients.",
+			date: "2022 - Present",
+		},
+		{
+			name: "Self-employed2",
+			roll: "Freelance Developer2",
+			description: "Developed custom websites and applications for clients2.",
+			date: "2022 - Present2",
+		},
+	];
+
+	const educations = [
+		{
+			name: "Fatec Prof° Jessen Vidal",
+			roll: "Technologist in Multiplatform Software Development",
+			description:
+				"Pursuing a Technologist Degree in Software Development with a focus on web development and software engineering",
+			date: "2025 - Present",
+		},
+		{
+			name: "Self-employed2",
+			roll: "Freelance Developer2",
+			description: "Developed custom websites and applications for clients2.",
+			date: "2022 - Present2",
+		},
+	];
+
 	return (
 		<Container
 			as="section"
-			className="grid justify-center content-center grid-cols-[auto_1fr] grid-rows-[repeat(2,max-content)] gap-y-5"
+			className="flex flex-col justify-center content-center grid-cols-[auto_1fr] grid-rows-[repeat(3,max-content)] grid-flow-row gap-y-5"
 		>
 			<Title className="whitespace-nowrap">About Me</Title>
-			<aside className="flex gap-8 row-start-2 col-start-1 -col-end-1">
+			<aside className="flex gap-8">
 				<div className="flex flex-col justify-between">
 					<Perfil />
 					<a
@@ -43,6 +75,17 @@ export default function AboutMe() {
 							<LanguageIcons card title="UI Design" />
 						</div>
 					</div>
+				</div>
+			</aside>
+			<aside className="flex justify-between">
+				<div className="space-y-1.5 w-2/5 min-h-[140px] h-fit">
+					<Title>Experience</Title>
+					<HistoryCard history={experiences} className="relative" />
+				</div>
+
+				<div className="space-y-1.5 w-2/5 min-h-[140px] h-fit">
+					<Title>Education</Title>
+					<HistoryCard history={educations} className="relative" />
 				</div>
 			</aside>
 		</Container>
