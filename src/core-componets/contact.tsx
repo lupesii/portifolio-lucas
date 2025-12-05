@@ -12,7 +12,7 @@ export default function Contact() {
 	return (
 		<Container
 			as="section"
-			className="grid grid-cols-[repeat(2,max-content)] grid-rows-[repeat(2,max-content)] justify-center content-center gap-7.5 h-auto"
+			className="grid grid-cols-1 grid-rows-[repeat(2,max-content)] justify-center content-center gap-y-7.5 w-fit h-auto my-10 lg:my-0"
 		>
 			<div className="space-y-5 ">
 				<Title>Contact me</Title>
@@ -26,7 +26,7 @@ export default function Contact() {
 					build something awesome together!
 				</Text>
 			</div>
-			<div className="flex gap-37.5 w-full row-start-2 row-end-auto col-span-2">
+			<div className="flex flex-col items-center gap-15 lg:flex-row lg:items-start lg:gap-37.5 w-full row-start-2 row-end-auto col-span-2">
 				<Form />
 				<div className="space-y-6.5">
 					<div>

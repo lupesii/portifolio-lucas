@@ -41,7 +41,7 @@ export default function HistoryCard({ className, history }: HistoryCardProps) {
 			</div>
 			<div
 				className={cx(
-					"bg-cinza-400 pt-5 pl-5 pr-10 pb-10 border border-azul rounded-[10px] h-fit",
+					"bg-cinza-400 pt-5 pl-5 pr-10 pb-10 border border-azul rounded-[10px] h-fit w-full ",
 					className,
 				)}
 			>

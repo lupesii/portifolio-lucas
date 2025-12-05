@@ -1,8 +1,6 @@
-import Perfil from "../assets/images/foto.svg?react";
+import AboutMeInfo from "../components/about-me-info";
 import Container from "../components/container";
 import HistoryCard from "../components/history-card";
-import LanguageIcons from "../components/languagens-icons";
-import Text from "../components/text";
 import Title from "../components/title";
 
 export default function AboutMe() {
@@ -40,50 +38,18 @@ export default function AboutMe() {
 	return (
 		<Container
 			as="section"
-			className="flex flex-col justify-center content-center grid-cols-[auto_1fr] grid-rows-[repeat(3,max-content)] grid-flow-row gap-y-5"
+			className="flex flex-col justify-center content-center grid-cols-[auto_1fr] grid-rows-[repeat(3,max-content)] grid-flow-row gap-y-20"
 		>
-			<Title className="whitespace-nowrap">About Me</Title>
-			<aside className="flex gap-8">
-				<div className="flex flex-col justify-between">
-					<Perfil />
-					<a
-						href="/Lucas Silva e Pereira.pdf"
-						download="Curriculo_Lucas.pdf"
-						className="inline-block w-full  text-center bg-cinza-400 text-white border border-azul font-mono font-semibold text-[28px] py-5 rounded-[10px]"
-					>
-						My Resume
-					</a>
-				</div>
-				<div className="flex flex-col gap-7">
-					<Text as="h1" variant="anony-lg">
-						Hi, I am Lucas Pereira
-					</Text>
-					<Text as="p" variant="anony-lg">
-						I am a Full-Stack developer, always looking for new experiences and
-						oportunies to learn and grow. I studied in a technical school in the
-						systems development course. I study on the internet courses with
-						many projects, especially in the Front-End area.
-					</Text>
-					<div className="flex flex-col gap-3">
-						<Text as="h2" variant="anony-md-bold">
-							Tools and Technologies I use
-						</Text>
-						<div className="grid grid-cols-2 grid-flow-row auto-rows-fr gap-y-10">
-							<LanguageIcons card title="Front-End" />
-							<LanguageIcons card title="Back-End" />
-							<LanguageIcons card title="Tools" />
-							<LanguageIcons card title="UI Design" />
-						</div>
-					</div>
-				</div>
-			</aside>
-			<aside className="flex justify-between">
-				<div className="space-y-1.5 w-2/5 min-h-[140px] h-fit">
+			<div className="space-y-5">
+				<Title className="whitespace-nowrap">About Me</Title>
+				<AboutMeInfo />
+			</div>
+			<aside className="grid lg:grid-cols-2 grid-cols-1 gap-10 md:gap-16 lg:gap-20 pb-16 md:pb-20 lg:pb-24">
+				<div className="space-y-5 w-full min-h-[140px] h-fit">
 					<Title>Experience</Title>
 					<HistoryCard history={experiences} className="relative" />
 				</div>
-
-				<div className="space-y-1.5 w-2/5 min-h-[140px] h-fit">
+				<div className="space-y-5 w-full min-h-[140px] h-fit">
 					<Title>Education</Title>
 					<HistoryCard history={educations} className="relative" />
 				</div>

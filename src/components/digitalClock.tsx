@@ -21,14 +21,10 @@ export default function DigitalClock() {
 			};
 
 			const horarioFormatado = horaAtual.toLocaleTimeString(
-				"default",
+				"en-US",
 				optionsTime,
 			);
-
-			const dataFormatada = horaAtual.toLocaleDateString(
-				"default",
-				optionsDate,
-			);
+			const dataFormatada = horaAtual.toLocaleDateString("en-US", optionsDate);
 
 			setHora(horarioFormatado);
 			setData(dataFormatada);

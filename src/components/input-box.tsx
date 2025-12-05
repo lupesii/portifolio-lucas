@@ -19,7 +19,12 @@ export default function InputBox({
 	...props
 }: InputBoxProps) {
 	return (
-		<div className={cx("flex flex-col justify-center gap-1.25", className)}>
+		<div
+			className={cx(
+				"flex flex-col justify-center gap-1.25 min-w-60",
+				className,
+			)}
+		>
 			<Text
 				as="label"
 				for={id}

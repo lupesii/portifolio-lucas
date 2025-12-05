@@ -2,13 +2,16 @@ import Container from "../components/container";
 import ProjectCard from "../components/project-card";
 import Text from "../components/text";
 import Title from "../components/title";
+import { useProjects } from "../hooks/useProjects";
 import { ProjectState } from "../types/project-state";
 
 export default function Projects() {
+	const { data } = useProjects();
+
 	return (
 		<Container
 			as="section"
-			className="max-w-[75vw] flex flex-col justify-center gap-7.5 h-auto"
+			className="flex flex-col justify-center gap-7.5 h-auto"
 		>
 			<div className="space-y-5">
 				<Title>Projects</Title>
@@ -21,31 +24,52 @@ export default function Projects() {
 					design.
 				</Text>
 			</div>
-			<div className="flex gap-7.5 flex-wrap">
-				<ProjectCard
-					titulo="Project Template"
-					descricao="Description Template"
-					webSiteURL="https://www.google.com"
-					githubURL="https://www.github.com"
-					status={ProjectState.Incompleted}
-					languages={["Html5", "Javascript", "CSS3", "ReactJS", "Tailwind"]}
-				/>
-				<ProjectCard
-					titulo="Project Template"
-					descricao="Description Template"
-					webSiteURL="https://www.google.com"
-					githubURL="https://www.github.com"
-					status={ProjectState.Completed}
-					languages={["Html5", "Javascript", "CSS3", "ReactJS", "Tailwind"]}
-				/>
-				<ProjectCard
-					titulo="Project Template"
-					descricao="Description Template"
-					webSiteURL="https://www.google.com"
-					githubURL="https://www.github.com"
-					status={ProjectState.Completed}
-					languages={["Html5", "Javascript", "CSS3", "ReactJS", "Tailwind"]}
-				/>
+			<div className="grid xlg_grid-cols-3 lg:grid-cols-2 grid-cols-1 justify-center content-center gap-7.5">
+				{data?.map((projeto) => (
+					<>
+						<ProjectCard
+							key={projeto.id}
+							titulo={projeto.title}
+							descricao={projeto.description}
+							webSiteURL={projeto.webSiteURL}
+							githubURL={projeto.githubURL}
+							status={
+								projeto.status
+									? ProjectState.Completed
+									: ProjectState.Incompleted
+							}
+							languages={projeto.languages}
+						/>
+
+						<ProjectCard
+							key={`dedefeef`}
+							titulo={projeto.title}
+							descricao={projeto.description}
+							webSiteURL={projeto.webSiteURL}
+							githubURL={projeto.githubURL}
+							status={
+								projeto.status
+									? ProjectState.Completed
+									: ProjectState.Incompleted
+							}
+							languages={projeto.languages}
+						/>
+
+						<ProjectCard
+							key={"efdeefef" + projeto.id}
+							titulo={projeto.title}
+							descricao={projeto.description}
+							webSiteURL={projeto.webSiteURL}
+							githubURL={projeto.githubURL}
+							status={
+								projeto.status
+									? ProjectState.Completed
+									: ProjectState.Incompleted
+							}
+							languages={projeto.languages}
+						/>
+					</>
+				))}
 			</div>
 		</Container>
 	);
