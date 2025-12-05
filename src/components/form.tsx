@@ -13,7 +13,7 @@ export default function Form() {
 	return (
 		<form
 			onSubmit={handleSubmitForm}
-			className="bg-cinza-400 border border-azul space-y-6.25 py-6 px-5 rounded-[10px] w-3/6"
+			className="bg-cinza-400 border border-azul space-y-6.25 py-6 px-5 rounded-[10px] min-w-fit w-3/6"
 		>
 			<Text as="h1" variant="anony-md-bold" className="mb-6.25" trace>
 				Lets build something together!

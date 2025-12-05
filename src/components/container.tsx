@@ -4,7 +4,7 @@ import { createElement } from "react";
 export const containerVariants = cva("mx-auto flex", {
 	variants: {
 		size: {
-			md: "md:h-screen max-w-[75vw]",
+			md: "min-h-dvh max-w-[90vw] lg:max-w-[70vw]",
 		},
 	},
 	defaultVariants: {

@@ -57,42 +57,53 @@ export default function ProjectCard({
 
 	return (
 		<article
-			className="inline-block bg-cinza-400 px-7.5 py-2.5 rounded-[10px] max-w-[460px] transition duration-50 transform-3d border border-azul"
+			className={`
+				bg-cinza-400 rounded-[10px] transition duration-50 transform-3d border border-azul
+				flex lg:flex-col lg:justify-center gap-5 lg:gap-0
+				px-5 lg:px-7.5 py-5 lg:py-2.5 lg:max-w-[500px]`}
 			onMouseMove={movingCard}
 			onMouseLeave={resetCard}
 			ref={cardRef}
 		>
-			<img src="/Rectangle 8.png" className="mt-3" />
+			<img
+				src="/Rectangle 8.png"
+				className="hidden sm:block sm:w-[200px] md:w-[300px] lg:w-auto lg:mt-3 aspect-auto"
+			/>
 
-			<div className="flex flex-col gap-2.5 mt-4.5 mb-6">
-				<Text variant="anony-2xl-bold" color="white">
-					{titulo}
-				</Text>
-				<Text variant="anony-xl-bold" color="muted">
-					{descricao}
-				</Text>
-			</div>
+			<div className="w-full">
+				<div className="flex flex-col gap-2.5 lg:mt-4.5 mb-6 overflow-hidden">
+					<Text variant="anony-2xl-bold" color="white">
+						{titulo}
+					</Text>
+					<Text
+						as="p"
+						variant="anony-xl-bold"
+						color="muted"
+						className="h-[90px] line-clamp-3"
+					>
+						{descricao}
+					</Text>
+				</div>
+				<LanguageBadgeList languageList={languages} className="mb-6" />
+				<div className="flex items-center justify-between border-t border-t-white lg:mt-[88px] pt-4">
+					<IconLink
+						href={webSiteURL}
+						icon={ExternalIcon}
+						className="flex items-center gap-1.5 bg-azul p-3 rounded-[10px] w-max"
+					>
+						Website
+					</IconLink>
 
-			<LanguageBadgeList languageList={languages} />
+					<IconLink
+						href={githubURL}
+						icon={GithubIcon}
+						className="flex items-center gap-1.5 bg-transparent border border-cinza-100 p-3 rounded-[10px] w-max"
+					>
+						More info
+					</IconLink>
 
-			<div className="flex items-center justify-between border-t border-t-white mt-[88px] pt-4">
-				<IconLink
-					href={webSiteURL}
-					icon={ExternalIcon}
-					className="flex items-center gap-1.5 bg-azul p-3 rounded-[10px] w-fit"
-				>
-					Website
-				</IconLink>
-
-				<IconLink
-					href={githubURL}
-					icon={GithubIcon}
-					className="flex items-center gap-1.5 bg-transparent border border-cinza-100 p-3 rounded-[10px] w-fit"
-				>
-					More info
-				</IconLink>
-
-				<ProjectStatus status={status} />
+					<ProjectStatus status={status} />
+				</div>
 			</div>
 		</article>
 	);
