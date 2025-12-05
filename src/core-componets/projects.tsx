@@ -2,9 +2,12 @@ import Container from "../components/container";
 import ProjectCard from "../components/project-card";
 import Text from "../components/text";
 import Title from "../components/title";
+import { useProjects } from "../hooks/useProjects";
 import { ProjectState } from "../types/project-state";
 
 export default function Projects() {
+	const { data } = useProjects();
+
 	return (
 		<Container
 			as="section"
@@ -22,30 +25,19 @@ export default function Projects() {
 				</Text>
 			</div>
 			<div className="flex gap-7.5 flex-wrap">
-				<ProjectCard
-					titulo="Project Template"
-					descricao="Description Template"
-					webSiteURL="https://www.google.com"
-					githubURL="https://www.github.com"
-					status={ProjectState.Incompleted}
-					languages={["Html5", "Javascript", "CSS3", "ReactJS", "Tailwind"]}
-				/>
-				<ProjectCard
-					titulo="Project Template"
-					descricao="Description Template"
-					webSiteURL="https://www.google.com"
-					githubURL="https://www.github.com"
-					status={ProjectState.Completed}
-					languages={["Html5", "Javascript", "CSS3", "ReactJS", "Tailwind"]}
-				/>
-				<ProjectCard
-					titulo="Project Template"
-					descricao="Description Template"
-					webSiteURL="https://www.google.com"
-					githubURL="https://www.github.com"
-					status={ProjectState.Completed}
-					languages={["Html5", "Javascript", "CSS3", "ReactJS", "Tailwind"]}
-				/>
+				{data?.map((projeto) => (
+					<ProjectCard
+						key={projeto.id}
+						titulo={projeto.title}
+						descricao={projeto.description}
+						webSiteURL={projeto.webSiteURL}
+						githubURL={projeto.githubURL}
+						status={
+							projeto.status ? ProjectState.Completed : ProjectState.Incompleted
+						}
+						languages={projeto.languages}
+					/>
+				))}
 			</div>
 		</Container>
 	);
