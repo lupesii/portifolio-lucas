@@ -3,7 +3,7 @@ import { type ComponentProps, createElement, type JSX } from "react";
 import Text from "./text";
 
 export const inputBoxVariants = cva(
-	"bg-cinza-300 border border-cinza-100 py-4.5 pl-3 rounded-[10px] text-white font-sans",
+	"bg-cinza-300 border border-cinza-100 py-4.5 pl-3 rounded-5 text-white font-sans",
 );
 
 interface InputBoxProps

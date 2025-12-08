@@ -32,6 +32,7 @@ export default function Circle({
 	color,
 	size,
 	className,
+	children,
 	...props
 }: CircleProps) {
 	return (

@@ -58,7 +58,7 @@ export default function ProjectCard({
 	return (
 		<article
 			className={`
-				bg-cinza-400 rounded-[10px] transition duration-50 transform-3d border border-azul
+				bg-cinza-400 rounded-5 transition duration-50 transform-3d border border-azul
 				flex lg:flex-col lg:justify-center gap-5 lg:gap-0
 				px-5 lg:px-7.5 py-5 lg:py-2.5 lg:max-w-[500px]`}
 			onMouseMove={movingCard}
@@ -72,7 +72,7 @@ export default function ProjectCard({
 
 			<div className="w-full">
 				<div className="flex flex-col gap-2.5 lg:mt-4.5 mb-6 overflow-hidden">
-					<Text variant="anony-2xl-bold" color="white">
+					<Text variant="anony-md-bold" color="white">
 						{titulo}
 					</Text>
 					<Text
@@ -88,16 +88,18 @@ export default function ProjectCard({
 				<div className="flex items-center justify-between border-t border-t-white lg:mt-[88px] pt-4">
 					<IconLink
 						href={webSiteURL}
+						target="_blank"
 						icon={ExternalIcon}
-						className="flex items-center gap-1.5 bg-azul p-3 rounded-[10px] w-max"
+						className="flex items-center gap-1.5 bg-azul p-3 rounded-5 w-max"
 					>
 						Website
 					</IconLink>
 
 					<IconLink
 						href={githubURL}
+						target="_blank"
 						icon={GithubIcon}
-						className="flex items-center gap-1.5 bg-transparent border border-cinza-100 p-3 rounded-[10px] w-max"
+						className="flex items-center gap-1.5 bg-transparent border border-cinza-100 p-3 rounded-5 w-max"
 					>
 						More info
 					</IconLink>

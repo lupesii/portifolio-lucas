@@ -17,7 +17,7 @@ export default function LanguageBadge({
 	return (
 		<div
 			className={cx(
-				"inline-flex items-center gap-1.5 bg-cinza-400 border border-cinza-100 rounded-[10px] px-2.5 py-3",
+				"inline-flex items-center gap-1.5 bg-cinza-400 border border-cinza-100 rounded-5 px-2.5 py-3",
 				className,
 			)}
 		>
