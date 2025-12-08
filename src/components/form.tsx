@@ -13,7 +13,7 @@ export default function Form() {
 	return (
 		<form
 			onSubmit={handleSubmitForm}
-			className="bg-cinza-400 border border-azul space-y-6.25 py-6 px-5 rounded-[10px] min-w-fit w-3/6"
+			className="bg-cinza-400 border border-azul space-y-6.25 py-6 px-5 rounded-5 min-w-fit w-3/6"
 		>
 			<Text as="h1" variant="anony-md-bold" className="mb-6.25" trace>
 				Lets build something together!
@@ -36,10 +36,10 @@ export default function Form() {
 
 			<button
 				type="submit"
-				className="flex items-center justify-center gap-3 bg-azul w-full p-5 rounded-[10px]"
+				className="flex items-center justify-center gap-3 bg-azul w-full p-5 rounded-5"
 			>
 				<Icon svg={SendIcon} />
-				<Text variant="anony-2xl-bold">Send Message</Text>
+				<Text variant="anony-md-bold">Send Message</Text>
 			</button>
 		</form>
 	);

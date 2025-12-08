@@ -1,4 +1,4 @@
-import Perfil from "../assets/images/foto.svg?react";
+import Img from "../assets/images/foto.svg?react";
 import Text from "../components/text";
 import { TechnologiesTypes } from "../types/technologies";
 import Technologies from "./technologies";
@@ -7,26 +7,26 @@ export default function AboutMeInfo() {
 	return (
 		<aside className="flex flex-col lg:flex-row gap-15">
 			<div className="flex flex-col gap-2">
-				<Perfil />
+				<Img />
 				<a
 					href="/Lucas Silva e Pereira.pdf"
 					download="Curriculo_Lucas.pdf"
-					className="inline-block w-full  text-center bg-cinza-400 text-white border border-azul font-mono font-semibold text-[28px] py-5 rounded-[10px]"
+					className="inline-block w-full text-center bg-cinza-400 text-white border border-azul font-mono font-semibold text-[24px] py-3 rounded-5"
 				>
 					My Resume
 				</a>
 			</div>
 			<div className="flex flex-col gap-7">
-				<Text as="h1" variant="anony-lg">
+				<Text as="h1" variant="albert-italic">
 					Hi, I am Lucas Pereira
 				</Text>
-				<Text as="p" variant="anony-lg">
+				<Text as="p" variant="anony-lg-bold">
 					I am a Full-Stack developer, always looking for new experiences and
 					oportunies to learn and grow. I studied in a technical school in the
 					systems development course. I study on the internet courses with many
 					projects, especially in the Front-End area.
 				</Text>
-				<div className="flex flex-col gap-8">
+				<div className="flex flex-col gap-4">
 					<Text as="h2" variant="anony-md-bold">
 						Tools and Technologies I use
 					</Text>

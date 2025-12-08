@@ -1,39 +1,13 @@
 import AboutMeInfo from "../components/about-me-info";
 import Container from "../components/container";
-import HistoryCard from "../components/history-card";
+import History from "../components/history";
 import Title from "../components/title";
+import useEducation from "../hooks/use-education";
+import useExperience from "../hooks/use-experience";
 
 export default function AboutMe() {
-	const experiences = [
-		{
-			name: "Self-employed",
-			roll: "Freelance Developer",
-			description: "Developed custom websites and applications for clients.",
-			date: "2022 - Present",
-		},
-		{
-			name: "Self-employed2",
-			roll: "Freelance Developer2",
-			description: "Developed custom websites and applications for clients2.",
-			date: "2022 - Present2",
-		},
-	];
-
-	const educations = [
-		{
-			name: "Fatec Prof° Jessen Vidal",
-			roll: "Technologist in Multiplatform Software Development",
-			description:
-				"Pursuing a Technologist Degree in Software Development with a focus on web development and software engineering",
-			date: "2025 - Present",
-		},
-		{
-			name: "Self-employed2",
-			roll: "Freelance Developer2",
-			description: "Developed custom websites and applications for clients2.",
-			date: "2022 - Present2",
-		},
-	];
+	const educationHook = useEducation();
+	const experienceHook = useExperience();
 
 	return (
 		<Container
@@ -47,11 +21,11 @@ export default function AboutMe() {
 			<aside className="grid lg:grid-cols-2 grid-cols-1 gap-10 md:gap-16 lg:gap-20 pb-16 md:pb-20 lg:pb-24">
 				<div className="space-y-5 w-full min-h-[140px] h-fit">
 					<Title>Experience</Title>
-					<HistoryCard history={experiences} className="relative" />
+					<History hook={experienceHook} />
 				</div>
 				<div className="space-y-5 w-full min-h-[140px] h-fit">
 					<Title>Education</Title>
-					<HistoryCard history={educations} className="relative" />
+					<History hook={educationHook} />
 				</div>
 			</aside>
 		</Container>

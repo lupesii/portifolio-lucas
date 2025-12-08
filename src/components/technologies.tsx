@@ -1,8 +1,14 @@
+import FigmaIcon from "../assets/icons/figma.svg?react";
 import CSSIcon from "../assets/icons/languages/colored/css3.svg?react";
+import GitIcon from "../assets/icons/languages/colored/git.svg?react";
 import HtmlIcon from "../assets/icons/languages/colored/html5.svg?react";
 import JSIcon from "../assets/icons/languages/colored/javascript.svg?react";
+import NodeJSIcon from "../assets/icons/languages/colored/node.svg?react";
+import PostmanIcon from "../assets/icons/languages/colored/postman.svg?react";
+import PythonIcon from "../assets/icons/languages/colored/python.svg?react";
 import ReactIcon from "../assets/icons/languages/colored/react.svg?react";
 import TailwindIcon from "../assets/icons/languages/colored/tailwind.svg?react";
+import VercelIcon from "../assets/icons/languages/colored/vercel.svg?react";
 import GithubIcon from "../assets/icons/languages/github.svg?react";
 import { TechnologiesTypes } from "../types/technologies";
 import Icon from "./icon";
@@ -30,30 +36,12 @@ const technologiesList = [
 		icon: TailwindIcon,
 	},
 	{
-		techGroup: TechnologiesTypes.tools,
-		icon: GithubIcon,
+		techGroup: TechnologiesTypes.back,
+		icon: NodeJSIcon,
 	},
 	{
 		techGroup: TechnologiesTypes.back,
-		icon: JSIcon,
-	},
-	{
-		techGroup: TechnologiesTypes.back,
-		icon: JSIcon,
-	},
-	{
-		techGroup: TechnologiesTypes.back,
-		icon: JSIcon,
-	},
-	{
-		techGroup: TechnologiesTypes.back,
-		icon: JSIcon,
-	},
-
-	// --- TOOLS (4 itens) ---
-	{
-		techGroup: TechnologiesTypes.tools,
-		icon: GithubIcon,
+		icon: PythonIcon,
 	},
 	{
 		techGroup: TechnologiesTypes.tools,
@@ -61,25 +49,19 @@ const technologiesList = [
 	},
 	{
 		techGroup: TechnologiesTypes.tools,
-		icon: GithubIcon,
+		icon: GitIcon,
 	},
 	{
 		techGroup: TechnologiesTypes.tools,
-		icon: GithubIcon,
+		icon: PostmanIcon,
 	},
-
-	// --- UI (3 itens) ---
 	{
-		techGroup: TechnologiesTypes.ui,
-		icon: TailwindIcon,
+		techGroup: TechnologiesTypes.tools,
+		icon: VercelIcon,
 	},
 	{
 		techGroup: TechnologiesTypes.ui,
-		icon: TailwindIcon,
-	},
-	{
-		techGroup: TechnologiesTypes.ui,
-		icon: TailwindIcon,
+		icon: FigmaIcon,
 	},
 ];
 
@@ -90,14 +72,17 @@ interface TechnologiesProps {
 export default function Technologies({ tech }: TechnologiesProps) {
 	return (
 		<div className="flex flex-col justify-center gap-4">
-			<Text as="h3" variant="anony-md-bold" trace>
+			<Text as="h3" variant="albert-lg-bold" trace>
 				{tech}
 			</Text>
 			<div className="space-x-2.5">
-				{technologiesList.map((t) => {
+				{technologiesList.map((t, index) => {
 					if (t.techGroup === tech) {
 						return (
-							<span className="inline-block bg-cinza-400 border border-cinza-100 p-2 rounded-[5px]">
+							<span
+								className="inline-block bg-cinza-400 border border-cinza-100 p-2 rounded-5"
+								key={index}
+							>
 								<Icon size="md" svg={t.icon} />
 							</span>
 						);

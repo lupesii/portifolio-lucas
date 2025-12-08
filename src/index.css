@@ -57,3 +57,11 @@
     }
   }
 }
+
+@utility rounded-5{
+  @apply rounded-[5px]
+}
+
+@utility rounded-10{
+  @apply rounded-[10px]
+}
