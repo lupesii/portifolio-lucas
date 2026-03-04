@@ -7,12 +7,15 @@ const textVariants = cva("max-w-fit max-h-fit m-0 p-0 leading-none", {
 			none: "",
 			"anony-lg":
 				"text-[50px] sm:text-[55px] md:text-[60px] lg:text-[70px] font-mono",
-			"anony-md": "text-2xl font-normal font-mono",
+			"anony-md":
+				"text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] font-normal font-mono",
 			"anony-sm": "text-[15px] md:text-[20px] font-normal font-mono",
 			"anony-xsm": "text-[12px] md:text-[15px]  font-normal font-mono",
 			"albert-lg": "text-[22px] font-normal font-sans",
-			"albert-md": "text-[16px] font-normal font-sans",
-			"albert-sm": "text-[11px] font-normal font-sans",
+			"albert-md":
+				"text-[20px] md:text-[22px] lg:text-[24px] font-normal font-sans",
+			"albert-sm": "textfont-normal font-sans",
+			"albert-xsm": "text-[11px] font-normal font-sans",
 		},
 		color: {
 			white: "text-white",
@@ -21,6 +24,10 @@ const textVariants = cva("max-w-fit max-h-fit m-0 p-0 leading-none", {
 		},
 		bold: {
 			true: "font-semibold",
+			false: "",
+		},
+		italic: {
+			true: "italic",
 			false: "",
 		},
 		trace: {
@@ -48,6 +55,7 @@ export default function Text({
 	children,
 	variant,
 	bold,
+	italic,
 	color,
 	trace,
 	...props
@@ -55,7 +63,14 @@ export default function Text({
 	return React.createElement(
 		as,
 		{
-			className: textVariants({ variant, bold, color, trace, className }),
+			className: textVariants({
+				variant,
+				bold,
+				italic,
+				color,
+				trace,
+				className,
+			}),
 			...props,
 		},
 		children,

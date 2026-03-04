@@ -18,7 +18,7 @@ export default function HistoryCard({ history, index }: HistoryCardProps) {
 					<a
 						href={history[index].certificate}
 						target="_blank"
-						className="text-azul text-[22px] font-semibold font-sans inline-flex items-center gap-0.5"
+						className=" text-azul text-[20px] md:text-[22px] font-semibold font-sans inline-flex items-center gap-0.5"
 					>
 						{history[index].name}
 						<Icon svg={ArrowIcon} className="rotate-45" />

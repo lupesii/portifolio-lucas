@@ -72,7 +72,7 @@ interface TechnologiesProps {
 export default function Technologies({ tech }: TechnologiesProps) {
 	return (
 		<div className="flex flex-col justify-center gap-4">
-			<Text as="h3" variant="albert-lg-bold" trace>
+			<Text as="h3" variant="albert-lg" bold trace>
 				{tech}
 			</Text>
 			<div className="space-x-2.5">

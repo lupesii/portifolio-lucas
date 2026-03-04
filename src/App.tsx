@@ -18,6 +18,8 @@ function App() {
 
 			<main className="min-h-full">
 				<Home />
+				<AboutMe />
+				<Projects />
 			</main>
 		</QueryClientProvider>
 	);

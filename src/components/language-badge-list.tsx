@@ -1,14 +1,14 @@
 import CSSIcon from "../assets/icons/languages/colored/css3.svg?react";
 import HtmlIcon from "../assets/icons/languages/colored/html5.svg?react";
-import JSIcon from "../assets/icons/languages/colored/javascript.svg?react";
+import NodeIcon from "../assets/icons/languages/colored/node.svg?react";
 import ReactIcon from "../assets/icons/languages/colored/react.svg?react";
 import TailwindIcon from "../assets/icons/languages/colored/tailwind.svg?react";
 import LanguageBadge from "./language-badge";
 
 export const LanguageBadgeInfo = [
 	{
-		nome: "Javascript",
-		svg: JSIcon,
+		nome: "Node.js",
+		svg: NodeIcon,
 	},
 	{
 		nome: "CSS3",

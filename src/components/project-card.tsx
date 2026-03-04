@@ -14,6 +14,7 @@ export interface ProjectCardProps {
 	githubURL: string;
 	status: ProjectState;
 	languages: string[];
+	imageURL: string;
 }
 
 export default function ProjectCard({
@@ -23,6 +24,7 @@ export default function ProjectCard({
 	githubURL,
 	status,
 	languages,
+	imageURL,
 }: ProjectCardProps) {
 	const cardRef = useRef<HTMLDivElement>(null);
 
@@ -66,7 +68,7 @@ export default function ProjectCard({
 			ref={cardRef}
 		>
 			<img
-				src="/Rectangle 8.png"
+				src={imageURL}
 				className="hidden sm:block sm:w-[200px] md:w-[300px] lg:w-auto lg:mt-3 aspect-auto"
 			/>
 

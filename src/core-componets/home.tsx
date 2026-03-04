@@ -17,7 +17,7 @@ export default function Home() {
 					aria-description="Wrapper Foto"
 				>
 					<img
-						src="/public/perfil.jpg"
+						src="/perfil.jpg"
 						alt="Foto de perfil do Lucas"
 						className="aspect-square h-full w-full z-1"
 					/>

@@ -8,11 +8,7 @@ interface TitleProps extends ComponentProps<"h1"> {}
 export default function Title({ className, children }: TitleProps) {
 	return (
 		<div>
-			<Text
-				as="h1"
-				variant="anony-xlg-bold"
-				className={cx("inline", className)}
-			>
+			<Text as="h1" variant="anony-lg" bold className={cx("inline", className)}>
 				{children}
 			</Text>
 			<Circle color="blue" size="lg" />

@@ -6,7 +6,7 @@ export default function useExperience() {
 		queryKey: ["experience"],
 		queryFn: async () => {
 			const response = await fetch(
-				`https://portfolios-api-production.up.railway.app/experience`,
+				`https://api-projects-n962.onrender.com/experience`,
 			);
 			const result: getHistoryResponde[] = await response.json();
 			return result;
