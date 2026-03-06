@@ -20,6 +20,7 @@ function App() {
 				<Home />
 				<AboutMe />
 				<Projects />
+				<Contact />
 			</main>
 		</QueryClientProvider>
 	);
