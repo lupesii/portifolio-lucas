@@ -10,12 +10,12 @@ const textVariants = cva("max-w-fit max-h-fit m-0 p-0 leading-none", {
 			"anony-md":
 				"text-[22px] sm:text-[24px] md:text-[26px] lg:text-[28px] font-normal font-mono",
 			"anony-sm": "text-[15px] md:text-[20px] font-normal font-mono",
-			"anony-xsm": "text-[12px] md:text-[15px]  font-normal font-mono",
+			"anony-xsm": "text-[12px] md:text-[15px] font-normal font-mono",
 			"albert-lg": "text-[22px] font-normal font-sans",
 			"albert-md":
 				"text-[20px] md:text-[22px] lg:text-[24px] font-normal font-sans",
-			"albert-sm": "textfont-normal font-sans",
-			"albert-xsm": "text-[11px] font-normal font-sans",
+			"albert-sm": "text-[18px] md:text-[20px] font-normal font-sans",
+			"albert-xsm": "text-[11px] md:text-[13px] lg:text-[14px] font-normal font-sans",
 		},
 		color: {
 			white: "text-white",

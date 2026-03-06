@@ -18,7 +18,7 @@ export default function Projects() {
 				<Text
 					variant="none"
 					color="muted"
-					className="font-mono font-semibold text-[22px]"
+					className="font-mono font-semibold text-[20px] md:text-[22px]"
 				>
 					Explore my mini-projects showcasing my skills in web development and
 					design.

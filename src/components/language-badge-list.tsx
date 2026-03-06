@@ -44,7 +44,7 @@ export default function LanguageBadgeList({
 	});
 
 	return (
-		<div className="flex items-center flex-wrap gap-3.75">
+		<div className="flex items-center flex-wrap gap-3.75 lg:mb-8">
 			{svgComponents.map((badge, index) =>
 				badge ? (
 					<LanguageBadge key={index} icon={badge.svg} className={className}>

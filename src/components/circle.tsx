@@ -8,6 +8,7 @@ export const circleVariants = cva("rounded-full inline-block", {
 			green: "bg-verde",
 			blue: "bg-azul",
 			cinza: "bg-cinza-400",
+			red: "bg-vermelho",
 		},
 		size: {
 			sm: "w-1.25 h-1.25",

@@ -23,15 +23,15 @@ export default function HistoryCard({ history, index }: HistoryCardProps) {
 						{history[index].name}
 						<Icon svg={ArrowIcon} className="rotate-45" />
 					</a>
-					<Text variant="albert-md" color="white">
+					<Text variant="albert-sm" color="white">
 						{history[index].subName}
 					</Text>
 				</div>
-				<Text variant="albert-md" color="white">
+				<Text variant="albert-sm" color="white">
 					{history[index].description}
 				</Text>
 				<Text
-					variant="albert-sm"
+					variant="albert-xsm"
 					color="muted"
 					className="absolute top-5 right-5"
 				>
