@@ -1,6 +1,5 @@
 import { cva, cx, type VariantProps } from "cva";
 import { type ComponentProps, createElement, type JSX } from "react";
-import Text from "./text";
 
 export const inputBoxVariants = cva(
 	"bg-cinza-300 border border-cinza-100 py-4.5 pl-3 rounded-5 text-white font-sans",
@@ -25,14 +24,12 @@ export default function InputBox({
 				className,
 			)}
 		>
-			<Text
-				as="label"
-				for={id}
-				variant="none"
-				className="font-sans text-[20px] font-medium"
+			<label
+				htmlFor={id}
+				className="font-sans text-white text-[20px] font-medium"
 			>
 				{id}
-			</Text>
+			</label>
 			{createElement(as, {
 				id,
 				className: cx(

@@ -35,10 +35,12 @@ export default function WeatherCard({
 
 	return (
 		<aside className={weatherCardVariants({ visibility, className })}>
-			<Text variant="albert-md-bold">S. J. Dos Campos, SP</Text>
+			<Text variant="albert-sm" bold>
+				S. J. Dos Campos, SP
+			</Text>
 			<div className="flex items-center gap-1">
 				<Icon svg={ThermometerIcon} />
-				<Text variant="anony-sm-bold" className="text-xl">
+				<Text variant="anony-xsm" bold className="text-xl">
 					{data?.current.temp_c}°C
 				</Text>
 			</div>

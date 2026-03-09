@@ -45,8 +45,12 @@ export default function DigitalClock() {
     inline-flex justify-center items-center gap-2 w-max h-ma
     `}
 		>
-			<Text variant={"anony-sm-bold"}>{hora}</Text>
-			<Text variant={"anony-sm-bold"}>{data}</Text>
+			<Text variant="anony-xsm" bold>
+				{hora}
+			</Text>
+			<Text variant="anony-xsm" bold>
+				{data}
+			</Text>
 		</aside>
 	);
 }
