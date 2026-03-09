@@ -2,11 +2,11 @@ import { type MouseEvent, useRef } from "react";
 import ExternalIcon from "../assets/icons/External-link.svg?react";
 import GithubIcon from "../assets/icons/languages/github.svg?react";
 import type { ProjectState } from "../types/project-state";
+import Circle from "./circle";
 import IconLink from "./icon-link";
 import LanguageBadgeList from "./language-badge-list";
 import ProjectStatus from "./project-status";
 import Text from "./text";
-import Circle from "./circle";
 
 export interface ProjectCardProps {
 	titulo: string;
@@ -73,15 +73,24 @@ export default function ProjectCard({
 				className={`
 					hidden aspect-video object-cover w-full max-h-[300px] sm:block sm:max-w-[250px] lg:max-w-full
 					md:max-h-[350px] md:w-full lg:mt-3	
-					justify-self-start
+					justify-self-start border border-white
 				`}
 			/>
 
 			<div className="flex flex-col w-full h-full">
 				<div className="flex flex-col gap-2.5 lg:mt-4.5 mb-6 overflow-hidden">
-					<Text variant="anony-sm" bold color="white" className="inline-flex items-center sm:inline">
+					<Text
+						variant="anony-sm"
+						bold
+						color="white"
+						className="inline-flex items-center sm:inline"
+					>
 						{titulo}
-						<Circle className="sm:hidden ml-2" size="lg" color={status === "Completed" ? "green" : "red"} />
+						<Circle
+							className="sm:hidden ml-2"
+							size="lg"
+							color={status === "Completed" ? "green" : "red"}
+						/>
 					</Text>
 					<Text
 						as="p"
