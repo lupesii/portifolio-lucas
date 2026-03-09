@@ -8,4 +8,5 @@ export interface Project {
 	githubURL: string;
 	status: ProjectState;
 	languages: string[];
+	imageURL: string;
 }

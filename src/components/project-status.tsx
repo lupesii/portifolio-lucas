@@ -2,7 +2,7 @@ import { cva, type VariantProps } from "cva";
 import Text from "./text";
 
 export const projectStatusVariants = cva(
-	"font-sans font-semibold py-1 px-3 rounded-2xl text-[16px]",
+	"hidden sm:block font-sans font-semibold py-1 px-3 rounded-2xl text-[16px]",
 	{
 		variants: {
 			status: {
@@ -27,11 +27,13 @@ export default function ProjectStatus({
 }: ProjectStatusProps) {
 	const content = status === "Completed" ? "Completed" : "Incompleted";
 	return (
+		<>
 		<Text
 			variant="none"
 			className={projectStatusVariants({ status, className })}
 		>
 			{content}
 		</Text>
+		</>
 	);
 }

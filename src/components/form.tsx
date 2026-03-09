@@ -13,13 +13,13 @@ export default function Form() {
 	return (
 		<form
 			onSubmit={handleSubmitForm}
-			className="bg-cinza-400 border border-azul space-y-6.25 py-6 px-5 rounded-5 min-w-fit w-3/6"
+			className="bg-cinza-400 border border-azul space-y-6.25 py-6 px-5 rounded-5 h-fit lg:min-w-[700px]"
 		>
-			<Text as="h1" variant="anony-md-bold" className="mb-6.25" trace>
+			<Text as="h1" variant="anony-md" bold className="mb-6.25" trace>
 				Lets build something together!
 			</Text>
 
-			<div className="flex items-center gap-5">
+			<div className="flex flex-col md:flex-row items-center gap-5">
 				<InputBox id="Name" placeholder="Your Name" className="w-full" />
 				<InputBox
 					id="Email"
@@ -39,7 +39,9 @@ export default function Form() {
 				className="flex items-center justify-center gap-3 bg-azul w-full p-5 rounded-5"
 			>
 				<Icon svg={SendIcon} />
-				<Text variant="anony-md-bold">Send Message</Text>
+				<Text variant="anony-sm" bold>
+					Send Message
+				</Text>
 			</button>
 		</form>
 	);

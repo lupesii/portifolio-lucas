@@ -6,7 +6,7 @@ export default function useEducation() {
 		queryKey: ["education"],
 		queryFn: async () => {
 			const response = await fetch(
-				`https://portfolios-api-production.up.railway.app/education`,
+				`https://api-projects-n962.onrender.com/education`,
 			);
 			const result: getHistoryResponde[] = await response.json();
 			return result;

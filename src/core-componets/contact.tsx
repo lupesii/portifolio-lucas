@@ -1,10 +1,6 @@
-import GithubIcon from "../assets/icons/languages/github.svg?react";
-import mailIcon from "../assets/icons/mail.svg?react";
+import ContactIcons from "../components/contact-icons";
 import Container from "../components/container";
 import Form from "../components/form";
-import Icon from "../components/icon";
-import IconLink from "../components/icon-link";
-
 import Text from "../components/text";
 import Title from "../components/title";
 
@@ -12,9 +8,9 @@ export default function Contact() {
 	return (
 		<Container
 			as="section"
-			className="grid grid-cols-1 grid-rows-[repeat(2,max-content)] justify-center content-center gap-y-7.5 w-fit h-auto my-10 lg:my-0"
+			className="flex flex-col justify-center gap-y-7.5 my-10 lg:my-0"
 		>
-			<div className="space-y-5 ">
+			<div className="space-y-5 lg:w-1/2">
 				<Title>Contact me</Title>
 				<Text
 					as="p"
@@ -26,57 +22,9 @@ export default function Contact() {
 					build something awesome together!
 				</Text>
 			</div>
-			<div className="flex flex-col items-center gap-15 lg:flex-row lg:items-start lg:gap-37.5 w-full row-start-2 row-end-auto col-span-2">
+			<div className="flex flex-col lg:flex-row gap-10">
 				<Form />
-				<div className="space-y-6.5">
-					<div>
-						<Text as="h1" variant="anony-md-bold" className="mb-2.5" trace>
-							Let's connect
-						</Text>
-						<Text
-							as="p"
-							variant="none"
-							color="muted"
-							className="font-mono font-semibold text-[18px] indent-3.75"
-						>
-							You can also find me
-						</Text>
-					</div>
-					<div className="flex gap-2.5 items-center">
-						<IconLink
-							icon={GithubIcon}
-							className="inline-flex bg-cinza-400 p-4.5 rounded-full"
-						/>
-						<IconLink
-							icon={GithubIcon}
-							className="inline-flex bg-cinza-400 p-4.5 rounded-full"
-						/>
-						<IconLink
-							icon={GithubIcon}
-							className="inline-flex bg-cinza-400 p-4.5 rounded-full"
-						/>
-						<IconLink
-							icon={GithubIcon}
-							className="inline-flex bg-cinza-400 p-4.5 rounded-full"
-						/>
-					</div>
-					<Text
-						as="p"
-						variant="none"
-						color="muted"
-						className="font-mono font-semibold text-[18px] indent-3.75"
-					>
-						Or reach me directly at:
-					</Text>
-					<Text
-						as="p"
-						variant="none"
-						className="flex items-center gap-[5px] font-mono font-semibold text-[16px] ml-3.75 mt-3.5"
-					>
-						<Icon svg={mailIcon} />
-						lucaspereira.dev@proton.me
-					</Text>
-				</div>
+				<ContactIcons />
 			</div>
 		</Container>
 	);

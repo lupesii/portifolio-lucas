@@ -6,7 +6,7 @@ export function useProjects() {
 		queryKey: ["projects"],
 		queryFn: async () => {
 			const response = await fetch(
-				"https://portfolios-api-production.up.railway.app/projects",
+				"https://api-projects-n962.onrender.com/projects",
 			);
 			const result: Project[] = await response.json();
 			return result;

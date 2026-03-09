@@ -18,7 +18,7 @@ export default function Projects() {
 				<Text
 					variant="none"
 					color="muted"
-					className="font-mono font-semibold text-[22px]"
+					className="font-mono font-semibold text-[20px] md:text-[22px]"
 				>
 					Explore my mini-projects showcasing my skills in web development and
 					design.
@@ -39,34 +39,7 @@ export default function Projects() {
 									: ProjectState.Incompleted
 							}
 							languages={projeto.languages}
-						/>
-
-						<ProjectCard
-							key={`dedefeef`}
-							titulo={projeto.title}
-							descricao={projeto.description}
-							webSiteURL={projeto.webSiteURL}
-							githubURL={projeto.githubURL}
-							status={
-								projeto.status
-									? ProjectState.Completed
-									: ProjectState.Incompleted
-							}
-							languages={projeto.languages}
-						/>
-
-						<ProjectCard
-							key={"efdeefef" + projeto.id}
-							titulo={projeto.title}
-							descricao={projeto.description}
-							webSiteURL={projeto.webSiteURL}
-							githubURL={projeto.githubURL}
-							status={
-								projeto.status
-									? ProjectState.Completed
-									: ProjectState.Incompleted
-							}
-							languages={projeto.languages}
+							imageURL={projeto.imageURL}
 						/>
 					</>
 				))}

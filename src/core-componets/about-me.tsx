@@ -12,7 +12,7 @@ export default function AboutMe() {
 	return (
 		<Container
 			as="section"
-			className="flex flex-col justify-center content-center grid-cols-[auto_1fr] grid-rows-[repeat(3,max-content)] grid-flow-row gap-y-20"
+			className="flex-col justify-center lg:items-center content-center gap-y-20"
 		>
 			<div className="space-y-5">
 				<Title className="whitespace-nowrap">About Me</Title>

@@ -18,20 +18,20 @@ export default function HistoryCard({ history, index }: HistoryCardProps) {
 					<a
 						href={history[index].certificate}
 						target="_blank"
-						className="text-azul text-[22px] font-semibold font-sans inline-flex items-center gap-0.5"
+						className=" text-azul text-[20px] md:text-[22px] font-semibold font-sans inline-flex items-center gap-0.5"
 					>
 						{history[index].name}
 						<Icon svg={ArrowIcon} className="rotate-45" />
 					</a>
-					<Text variant="albert-md" color="white">
+					<Text variant="albert-sm" color="white">
 						{history[index].subName}
 					</Text>
 				</div>
-				<Text variant="albert-md" color="white">
+				<Text variant="albert-sm" color="white">
 					{history[index].description}
 				</Text>
 				<Text
-					variant="albert-sm"
+					variant="albert-xsm"
 					color="muted"
 					className="absolute top-5 right-5"
 				>
