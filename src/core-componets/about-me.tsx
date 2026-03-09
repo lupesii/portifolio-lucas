@@ -18,7 +18,7 @@ export default function AboutMe() {
 				<Title className="whitespace-nowrap">About Me</Title>
 				<AboutMeInfo />
 			</div>
-			<aside className="grid lg:grid-cols-2 grid-cols-1 gap-10 md:gap-16 lg:gap-20 pb-16 md:pb-20 lg:pb-24">
+			<aside className="w-full grid lg:grid-cols-2 grid-cols-1 gap-10 md:gap-16 lg:gap-20 pb-16 md:pb-20 lg:pb-24">
 				<div className="space-y-5 w-full min-h-[140px] h-fit">
 					<Title>Experience</Title>
 					<History hook={experienceHook} />

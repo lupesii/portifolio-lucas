@@ -1,4 +1,5 @@
-import { cva, type VariantProps } from "cva";
+import { cva, cx, type VariantProps } from "cva";
+import Skeleton from "./skeleton";
 import Text from "./text";
 
 export const projectStatusVariants = cva(
@@ -11,7 +12,7 @@ export const projectStatusVariants = cva(
 			},
 		},
 		defaultVariants: {
-			status: "Completed",
+			status: "Incompleted",
 		},
 	},
 );
@@ -19,21 +20,34 @@ export const projectStatusVariants = cva(
 interface ProjectStatusProps
 	extends VariantProps<typeof projectStatusVariants> {
 	className?: string;
+	loading?: boolean;
 }
 
 export default function ProjectStatus({
 	status,
 	className,
+	loading,
 }: ProjectStatusProps) {
-	const content = status === "Completed" ? "Completed" : "Incompleted";
+	if (loading) {
+		return (
+			<Skeleton
+				className={cx([
+					projectStatusVariants({ status, className }),
+					`w-1/5 h-5`,
+				])}
+				rounded="full"
+			/>
+		);
+	}
+
 	return (
 		<>
-		<Text
-			variant="none"
-			className={projectStatusVariants({ status, className })}
-		>
-			{content}
-		</Text>
+			<Text
+				variant="none"
+				className={projectStatusVariants({ status, className })}
+			>
+				{status}
+			</Text>
 		</>
 	);
 }

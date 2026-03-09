@@ -4,13 +4,14 @@ import ArrowIcon from "../assets/icons/arrow.svg?react";
 import type { getHistoryResponde } from "../types/get-history";
 import Circle from "./circle";
 import HistoryCard from "./history-card";
+import HistoryCardSkeleton from "./history-card-skeleton";
 
 export interface HistoryProps {
 	hook: UseQueryResult<getHistoryResponde[], Error>;
 }
 
 export default function History({ hook }: HistoryProps) {
-	const { data } = hook;
+	const { data, isLoading } = hook;
 	const [index, setIndex] = useState(0);
 
 	if (!data) return null;
@@ -41,7 +42,8 @@ export default function History({ hook }: HistoryProps) {
 					<ArrowIcon className="rotate-180 w-5" onClick={handleIncreaseIndex} />
 				</div>
 			</div>
-			<HistoryCard history={data} index={index} />
+			{isLoading && <HistoryCardSkeleton />}
+			{!isLoading && <HistoryCard history={data} index={index} />}
 		</div>
 	);
 }

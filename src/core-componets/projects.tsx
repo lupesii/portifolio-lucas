@@ -1,13 +1,13 @@
 import Container from "../components/container";
 import ProjectCard from "../components/project-card";
+import ProjectCardSkeleton from "../components/project-card-skeleton";
 import Text from "../components/text";
 import Title from "../components/title";
 import { useProjects } from "../hooks/useProjects";
 import { ProjectState } from "../types/project-state";
 
 export default function Projects() {
-	const { data } = useProjects();
-
+	const { data, isLoading } = useProjects();
 	return (
 		<Container
 			as="section"
@@ -25,24 +25,32 @@ export default function Projects() {
 				</Text>
 			</div>
 			<div className="grid xlg_grid-cols-3 lg:grid-cols-2 grid-cols-1 justify-center content-center gap-7.5">
-				{data?.map((projeto) => (
+				{isLoading && (
 					<>
-						<ProjectCard
-							key={projeto.id}
-							titulo={projeto.title}
-							descricao={projeto.description}
-							webSiteURL={projeto.webSiteURL}
-							githubURL={projeto.githubURL}
-							status={
-								projeto.status
-									? ProjectState.Completed
-									: ProjectState.Incompleted
-							}
-							languages={projeto.languages}
-							imageURL={projeto.imageURL}
-						/>
+						<ProjectCardSkeleton />
+						<ProjectCardSkeleton />
 					</>
-				))}
+				)}
+
+				{!isLoading &&
+					data?.map((projeto) => (
+						<>
+							<ProjectCard
+								key={projeto.id}
+								titulo={projeto.title}
+								descricao={projeto.description}
+								webSiteURL={projeto.webSiteURL}
+								githubURL={projeto.githubURL}
+								status={
+									projeto.status
+										? ProjectState.Completed
+										: ProjectState.Incompleted
+								}
+								languages={projeto.languages}
+								imageURL={projeto.imageURL}
+							/>
+						</>
+					))}
 			</div>
 		</Container>
 	);

@@ -6,7 +6,7 @@ import Text from "./text";
 export const iconLinkVariants = cva("", {
 	variants: {
 		disabled: {
-			true: "pointer-events-none",
+			true: "pointer-events-none opacity-50",
 		},
 	},
 	defaultVariants: {
