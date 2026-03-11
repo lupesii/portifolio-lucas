@@ -14,8 +14,6 @@ export default function History({ hook }: HistoryProps) {
 	const { data, isLoading } = hook;
 	const [index, setIndex] = useState(0);
 
-	if (!data) return null;
-
 	function handleIncreaseIndex() {
 		setIndex((prev) => (prev < data!.length - 1 ? prev + 1 : prev));
 	}
@@ -43,7 +41,7 @@ export default function History({ hook }: HistoryProps) {
 				</div>
 			</div>
 			{isLoading && <HistoryCardSkeleton />}
-			{!isLoading && <HistoryCard history={data} index={index} />}
+			{!isLoading && data && <HistoryCard history={data} index={index} />}
 		</div>
 	);
 }

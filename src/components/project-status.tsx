@@ -7,12 +7,13 @@ export const projectStatusVariants = cva(
 	{
 		variants: {
 			status: {
+				none: "",
 				Completed: "bg-verde",
 				Incompleted: "bg-vermelho",
 			},
 		},
 		defaultVariants: {
-			status: "Incompleted",
+			status: "none",
 		},
 	},
 );
