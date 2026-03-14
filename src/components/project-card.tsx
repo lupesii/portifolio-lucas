@@ -110,6 +110,7 @@ export default function ProjectCard({
 							target="_blank"
 							icon={ExternalIcon}
 							className="flex items-center gap-1.5 bg-azul p-3 rounded-5 w-max"
+							hover={false}
 						>
 							Website
 						</IconLink>
@@ -118,6 +119,7 @@ export default function ProjectCard({
 							target="_blank"
 							icon={GithubIcon}
 							className="flex items-center gap-1.5 bg-transparent border border-cinza-100 p-3 rounded-5 w-max"
+							hover={false}
 						>
 							More info
 						</IconLink>

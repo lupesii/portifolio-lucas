@@ -1,5 +1,5 @@
 import { cva, cx, type VariantProps } from "cva";
-import { type ComponentProps, createElement, type ElementType } from "react";
+import { type ComponentProps, createElement } from "react";
 import Icon from "./icon";
 import Text from "./text";
 
@@ -14,27 +14,40 @@ export const iconLinkVariants = cva("", {
 	},
 });
 
-type IconLinkProps<T extends ElementType = "a"> = VariantProps<
-	typeof iconLinkVariants
-> &
-	Omit<ComponentProps<T>, "disabled"> & {
-		as?: T;
-		icon: ComponentProps<typeof Icon>["svg"];
-	};
+const iconLinkShadowVariants = cva("", {
+	variants: {
+		hover: {
+			true: "hidden group-hover:block absolute top-1/2 left-1/2 -translate-1/2 -z-1 w-1 h-1 shadow-[0px_0px_25px_10px_var(--color-azul)]",
+		},
+	},
+	defaultVariants: {
+		hover: true,
+	},
+});
 
-export default function IconLink<T extends ElementType = ElementType>({
-	as,
+interface IconLinkProps
+	extends VariantProps<typeof iconLinkVariants>,
+		ComponentProps<"a">,
+		VariantProps<typeof iconLinkShadowVariants> {
+	icon: ComponentProps<typeof Icon>["svg"];
+}
+
+export default function IconLink({
 	icon,
 	className,
 	children,
 	disabled,
+	hover,
 	...props
-}: IconLinkProps<T>) {
-	const Tag = (as ?? "a") as ElementType;
+}: IconLinkProps) {
 	return createElement(
-		Tag,
+		"a",
 		{
-			className: cx(iconLinkVariants({ disabled }), className),
+			className: cx(
+				iconLinkVariants({ disabled }),
+				className,
+				"group relative",
+			),
 			...props,
 		},
 		createElement(Icon, { svg: icon }),
@@ -43,5 +56,6 @@ export default function IconLink<T extends ElementType = ElementType>({
 				{children}
 			</Text>
 		) : null,
+		<div className={iconLinkShadowVariants({ hover })}></div>,
 	);
 }
