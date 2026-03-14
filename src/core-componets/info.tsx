@@ -26,6 +26,7 @@ export default function Info() {
 				<button
 					className="bg-cinza-400 p-1.75 w-fit h-fit rounded-full hover:bg-cinza-300"
 					onClick={!visible ? weatherVisibility : weatherHidden}
+					aria-label="Botão do Clima"
 				>
 					<Icon svg={WeatherIcon} size="none" className="w-6 h-6" />
 				</button>

@@ -16,12 +16,10 @@ function App() {
 			<Starry />
 			<Info />
 
-			<main className="min-h-full">
-				<Home />
-				<AboutMe />
-				<Projects />
-				<Contact />
-			</main>
+			<Home />
+			<AboutMe />
+			<Projects />
+			<Contact />
 		</QueryClientProvider>
 	);
 }

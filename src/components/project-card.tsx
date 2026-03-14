@@ -75,6 +75,7 @@ export default function ProjectCard({
 					md:max-h-[350px] md:w-full lg:mt-3	
 					justify-self-start border border-white
 				`}
+				alt={titulo + "-" + descricao}
 			/>
 
 			<div className="flex flex-col w-full h-full">
